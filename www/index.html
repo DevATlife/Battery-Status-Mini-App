@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        
+        <link rel="stylesheet"  href="css/jquery.mobile-1.4.5.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <title>Battery Status</title>
+    </head>
+    <style>
+    #bat-cont{
+        
+        width:250px;
+        height:100px;
+        border:1px solid gray;
+        border-radius:5px;
+        margin:0 auto;
+        background:transparent;
+        }
+        
+        #bat-level{
+         
+        height:100%;
+        background: white;
+        border-radius:5px;
+        background: #4bbb3b;
+        }
+    </style>
+    <body>
+        
+          <center><h3>Battery Status</h3></center><br><br><br>
+        <ul data-role="listview">
+        <li >Event Fired: <span id="ButteryEvent">...</span></li>
+        <li >Battery Level:<span id="BatteryLevel">...</span></li>
+        <li >Device Plugged in: <span id="BatteryPlugged">...</span></li>
+        </ul>
+        <br><br>
+        <div id="bat-cont" style="display:none;"><div id="bat-level"><span id="BatteryLevel"></span></div></div>
+        
+         <script src="js/batteryStatusAPI.js"></script>   
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
